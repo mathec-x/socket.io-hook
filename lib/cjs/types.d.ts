@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { DispatchProp } from "react-redux";
-import type { Socket, SocketOptions } from "socket.io-client";
+import { Socket, SocketOptions } from "socket.io-client";
 export declare type useSocketProps = SocketOptions & {
     url?: string;
     options?: {
