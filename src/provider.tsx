@@ -52,7 +52,7 @@ const SocketIoProvider: FC<SocketIoProps> = ({ onDisconnect, onConnect, onRefres
     }, [socket]);
 
     if(socket){
-        return <IoContext.Provider value={ socket } />;
+        return <IoContext.Provider value={ socket } {...props}/>;
     } else {
         return preloader||null        
     }
