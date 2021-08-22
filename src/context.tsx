@@ -1,7 +1,6 @@
 import React from "react";
-import { Socket } from "socket.io-client";
+import { IoContextInterface } from "./types";
 
-declare const IoSocketInstance: Socket;
-
-export const IoContext = React.createContext(IoSocketInstance);
+const IoSocketInstance: IoContextInterface = null;
+export const IoContext = React.createContext<IoContextInterface>(IoSocketInstance);
 export const useSocket = () => React.useContext(IoContext);

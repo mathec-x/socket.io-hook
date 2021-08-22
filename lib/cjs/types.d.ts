@@ -10,7 +10,8 @@ export declare type useSocketProps = SocketOptions & {
         } | ((cb: (data: object) => void) => void) | undefined;
     };
 };
-export declare type SocketIoProps = useSocketProps & {
+export declare type IoContextInterface = Socket | null;
+export interface SocketIoProps extends useSocketProps {
     onDisconnect?(Socket: Socket): void;
     onConnect?(Socket: Socket): void;
     onRefresh?(data: any): void;
@@ -18,8 +19,8 @@ export declare type SocketIoProps = useSocketProps & {
         type: string;
         payload: any;
     }): DispatchProp;
-    preloader?: JSX.Element;
+    suspense?: JSX.Element;
     custom?: {
         [key: string]: (...args: any[]) => void;
     };
-};
+}

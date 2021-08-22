@@ -11,12 +11,14 @@ export type useSocketProps = SocketOptions & {
     }
 }
 
-export type SocketIoProps = useSocketProps & {
+export type IoContextInterface = Socket | null
+
+export interface SocketIoProps extends useSocketProps {
     onDisconnect?(Socket: Socket): void;
     onConnect?(Socket: Socket): void;
     onRefresh?(data: any): void;
     onDispatch?(data: {type: string, payload: any}): DispatchProp;
-    preloader?: JSX.Element;
+    suspense?: JSX.Element;
     custom?: {
         [key: string]: (...args: any[]) => void
     }
