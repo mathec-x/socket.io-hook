@@ -11,7 +11,7 @@ export type useSocketProps = SocketOptions & {
     }
 }
 
-export type SocketIoContextType = Socket;
+export interface SocketIoContextType extends Socket { };
 
 
 export type SocketIoProps = useSocketProps & {

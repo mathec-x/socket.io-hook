@@ -10,7 +10,8 @@ export declare type useSocketProps = SocketOptions & {
         } | ((cb: (data: object) => void) => void) | undefined;
     };
 };
-export declare type SocketIoContextType = Socket;
+export interface SocketIoContextType extends Socket {
+}
 export declare type SocketIoProps = useSocketProps & {
     onDisconnect?(Socket: Socket): void;
     onConnect?(Socket: Socket): void;
