@@ -1,10 +1,10 @@
-import { useSocketProps, SocketIoContextType, SocketIoProps } from './types';
+import { useSocketProps, SocketIoProps } from './types';
 import React, { FC } from 'react';
-import io from 'socket.io-client';
+import io, { Socket } from 'socket.io-client';
 import { IoContext } from './context';
 
 const useSocket = (props: useSocketProps) => {
-    const [socket, setSocket] = React.useState<SocketIoContextType>();
+    const [socket, setSocket] = React.useState<Socket>();
 
     React.useEffect(() => {
         if (typeof window !== 'undefined') {

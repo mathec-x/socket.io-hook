@@ -1,5 +1,5 @@
 import { DispatchProp } from "react-redux";
-import { Socket, SocketOptions } from "socket.io-client"
+import type { Socket, SocketOptions } from "socket.io-client"
 
 export type useSocketProps = SocketOptions & {
     url?: string;
@@ -10,9 +10,6 @@ export type useSocketProps = SocketOptions & {
         } | ((cb: (data: object) => void) => void) | undefined
     }
 }
-
-export interface SocketIoContextType extends Socket { };
-
 
 export type SocketIoProps = useSocketProps & {
     onDisconnect?(Socket: Socket): void;
