@@ -1,6 +1,6 @@
 import { useSocketProps, SocketIoProps, IoContextInterface } from "./types";
 import React, { FC } from "react";
-import io from "socket.io-client";
+import { io } from "socket.io-client";
 import { IoContext } from "./context";
 
 const useSocket = (props: useSocketProps) => {

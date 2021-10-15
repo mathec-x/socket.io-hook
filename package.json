@@ -1,6 +1,6 @@
 {
   "name": "socket.io-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "better hook to use with socket io, works with create-next-app or create-react-app",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
